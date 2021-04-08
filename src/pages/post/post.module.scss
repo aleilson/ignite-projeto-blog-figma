@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.articlePost {
+.hero {
   width: 700px;
   margin: 80px auto 0;
 
@@ -16,25 +16,35 @@
     color: var(--silver-100);
   }
 
-  .infoPost{
-    width: 310px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
+  .contentDatePost{
     margin: 1.3rem 0 3.8rem;
-  
-    span{
+    
+    .infoPost{
+      width: 310px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+    
+      span{
+        display: flex;
+        align-items: center;
+        color: var(--silver-500);
+        font-size: 14px;
+    
+        svg{
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .editedPost{
+      margin-top: 0.9rem;
+      display: block;
+  
       color: var(--silver-500);
       font-size: 14px;
-  
-      svg{
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
-      }
     }
   }
 
@@ -50,6 +60,33 @@
 
       p, ul, li{
         padding: 0.7rem 0;
+      }
+    }
+  }
+
+  .pagination{
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+
+      li {
+        a {
+          span{
+            display: block;
+          }
+
+          strong {
+            color: var(--pink-100);
+
+            transition: filter 0.2s;
+
+            &:hover {
+              filter: brightness(0.7);
+            }
+          }
+        }
       }
     }
   }
